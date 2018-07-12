@@ -9,3 +9,4 @@ deploy:
   acl: bucket_owner_full_control
   on:
     repo: bitsmag/accSlFrontend
+  region: us-west-2
