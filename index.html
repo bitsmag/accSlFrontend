@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Acc</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <h1>Acc</h1>
+
+        <!-- Tab links -->
+        <div class="tab">
+            <button id="defaultTab" class="tablinks" onclick="openTab(event, 'payin')">Pay In</button>
+            <button class="tablinks" onclick="openTab(event, 'payout')">Pay out</button>
+            <button class="tablinks" onclick="openTab(event, 'log')">Log</button>
+            <button id="balanceButton" class="btn">Print Balance</button>
+        </div>
+        
+        <!-- Tab content -->
+        <div id="payin" class="tabcontent">
+            Amount: <input id="pinAmount" type="text"/> 
+            <br>
+            Date: <input id="pinDate" type="text"/> 
+            <br>
+            Category: <select name="pinCategory">
+                <option value="Salary">Salary</option>
+                <option value="Rent">Rent</option>
+                <option value="Fightclub">Fightclub</option>
+                <option value="Shady business">Shady business</option>
+              </select>
+            <button id="pinButton" class="btn">Pay In</button>
+        </div>
+        
+        <div id="payout" class="tabcontent">
+            Amount: <input id="poutAmount" type="text"/> 
+            <br>
+            Date: <input id="poutDate" type="text"/> 
+            <br>
+            Category: <select name="poutCategory">
+                <option value="Ice-Cream">Ice-Cream</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Holiday">Holiday</option>
+                <option value="Beetroot juice">Beetroot juice</option>
+              </select>
+            <button id="poutButton" class="btn">Pay Out</button>
+        </div>
+        
+        <div id="log" class="tabcontent">
+            Order by: <select name="logOrder">
+                <option value="year">Year</option>
+                <option value="category">Category</option>
+              </select> 
+            <br>
+            Date-filter:  <input id="logDate" type="text"/> 
+            <br>
+            Category-filter: <select name="logCategory">
+                <option value="Salary">Salary</option>
+                <option value="Rent">Rent</option>
+                <option value="Fightclub">Fightclub</option>
+                <option value="Shady business">Shady business</option>
+                <option value="Ice-Cream">Salary</option>
+                <option value="Pizza">Rent</option>
+                <option value="Holiday">Fightclub</option>
+                <option value="Beetroot juice">Shady business</option>
+              </select>
+            <button id="logButton" class="btn">Print Log</button>
+        </div>
+
+        <textarea id="outputArea"></textarea>
+
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
