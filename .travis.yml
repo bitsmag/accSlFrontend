@@ -5,8 +5,8 @@ deploy:
   access_key_id: AKIAJHS35VHMVM6FC4SA
   secret_access_key:
     secure: GLEFgBd3h6G+30/3yhsnr8ACqDdP/e5xNy3F7tn2QmDw8gBk6H9eGqydbabmURRQp5JSQBBOaXTUpoP8NkjfqoSnk241jGgZuYCFjZKealj2LlZ+FMkWsz00ipkqNk5eGOWjq1ZxEtL5Gvgu1SjDOYfsLFfO7gTssgvN9N+uSmG8Dj5DdnAfksvkrDgsjAkiTmd4ulqN16RuFvqrkiYq+3thlJwhJsL1wGdlGyCmy1/tQucfVvisPyA9l+AypaRE6GI3j1CX5fNTRy2D1fDS7H1p1zATHqVw4rF461DLitL+/Zq5StJcaBXqvVszEiT7m+ajXmTy8qetuWDrICnO6oIav5obYjmg88uOunCWVg/C0U88UbdZV9RQQTtzE3TF0xnQUsl5oU/rXeEdYDxQeZrt1JbiDJxqxyMPzPY2diuKUm73+8xkwxdPB1BYEWmLumOdi+/b3Rf0tNMPY1zV9GnpV7XFKaqWsSQexYxU16Zt+B5B/IxowhPARKG40V2yejfxVEDrXh+QAELYae079oyHfeGoyJQ3zVMwWP+h1vN0EdrsVTf0YZZcxtIJGK/+ns+iaNnqWSjgQhs6RaCJukNco91Y5hK9uwQ2JK6UKIGdH5MfLDFyOgWseQVUdERQmxaQ9IqjqUtpDtLzVX5zFKNayK2KwUBFJXw3oj9olGI=
-  bucket: acc.frontend.dist
+  bucket: acc.frontend.build
   acl: bucket_owner_full_control
   on:
     repo: bitsmag/accSlFrontend
-  region: ap-south-1
+  region: us-west-2
