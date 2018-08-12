@@ -1,6 +1,12 @@
 // API REQUESTS
 
-const apiBaseUrl = 'https://m2ltd8iv1k.execute-api.us-west-2.amazonaws.com/dev/';
+let apiBaseUrl;
+
+$.ajax({url: 'https://s3-us-west-2.amazonaws.com/acc.frontend/apiBaseUrl.json', success: function(result){
+    apiBaseUrl = JSON.parse(result).url;
+}, error: function(a, b ,c) {
+    printResult("Couldn't retreive backend URL")
+}});
 
 $('#pinButton').click(
     function(){
@@ -40,11 +46,15 @@ $('#balanceButton').click(
 
 function callServiceAndPrintResult(url) {
     $.ajax({url: url, success: function(result){
-        $("#outputArea")[0].value = result;
-        $("#outputArea")[0].scrollTop = $("#outputArea")[0].scrollHeight
+        printResult(result);
     }, error: function(a, b ,c) {
         console.log('err');
     }});
+}
+
+function printResult(result) {
+        $("#outputArea")[0].value = result;
+        $("#outputArea")[0].scrollTop = $("#outputArea")[0].scrollHeight
 }
 
 // TAB MANGEMENT
