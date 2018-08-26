@@ -12,7 +12,7 @@ $('#pinButton').click(
     function(){
         var url = apiBaseUrl + 'pin/' + $('#pinAmount')[0].value;
         $('#pinDate')[0].value != '' ? url += '/' + $('#pinDate')[0].value : url = url;
-        $('select[name=pinCategory]')[0].value != '' ? url += '/' + $('select[name=pinCategory]')[0].value : url = url;
+        $('#pinCategory')[0].value != '' ? url += '/' + $('#pinCategory')[0].value : url = url;
         callServiceAndPrintResult(url);
     }
 )
@@ -21,7 +21,7 @@ $('#poutButton').click(
     function(){
         var url = apiBaseUrl + 'pout/' + $('#poutAmount')[0].value;
         $('#poutDate')[0].value != '' ? url += '/' + $('#poutDate')[0].value : url = url;
-        $('select[name=poutCategory]')[0].value != '' ? url += '/' + $('select[name=poutCategory]')[0].value : url = url;
+        $('#poutCategory')[0].value != '' ? url += '/' + $('#poutCategory')[0].value : url = url;
         callServiceAndPrintResult(url);
     }
 )
@@ -32,7 +32,7 @@ $('#logButton').click(
         //$('select[name=logOrder]')
         $('select[name=logOrder]')[0].value != '' ? url += $('select[name=logOrder]')[0].value : url = url;
         $('#logDate')[0].value != '' ? url += '/' + $('#logDate')[0].value : url = url;
-        $('select[name=logCategory]')[0].value != '' ? url += '/' + $('select[name=logCategory]')[0].value : url = url;
+        $('#logCategory')[0].value != '' ? url += '/' + $('#logCategory')[0].value : url = url;
         callServiceAndPrintResult(url);
     }
 )
